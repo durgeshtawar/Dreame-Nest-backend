@@ -1,0 +1,44 @@
+# Ignore environment configuration files
+.env
+
+# Ignore log files
+*.log
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore lock files
+*.lock
+
+# Ignore process ID files
+*.pid
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore code coverage reports
+coverage/
+
+# Ignore JetBrains IDE settings
+.idea/
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore SQLite database files
+*.sqlite
+
+# Ignore other database files
+*.db
+
+# Ignore history or backup files
+.history/
+
+# Ignore temporary files created by text editors like Vim
+*.swp
+
+# Ignore Vim swap files
+*.swo
+
+# Ignore temporary files
+.tmp/
