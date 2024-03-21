@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "routes": [
+      { "src": "/auth/(.*)", "dest": "/index.js" },
+      { "src": "/properties/(.*)", "dest": "/index.js" },
+      { "src": "/bookings/(.*)", "dest": "/index.js" },
+      { "src": "/users/(.*)", "dest": "/index.js" },
+      { "src": "/(.*)", "dest": "/index.js" }
+    ],
+    "builds": [
+      { "src": "/index.js", "use": "@vercel/node" }
+    ],
+    "env": {
+      "MONGO_URL": "mongodb+srv://durgesh123:durgesh2002@e-state.r9uqyfm.mongodb.net/"
+    }
+  }
+  
