@@ -5,7 +5,10 @@
 *.log
 
 # Ignore Node.js modules
-node_modules/
+node_modules/*
+.idea/*
+images/*
+!images/.gitkeep
 
 # Ignore lock files
 *.lock
@@ -42,3 +45,5 @@ coverage/
 
 # Ignore temporary files
 .tmp/
+
+package-lock.json
