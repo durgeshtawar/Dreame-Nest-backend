@@ -27,8 +27,8 @@ const PORT = 3000;
 mongoose
   .connect(process.env.MONGO_URL, {
     dbName: "Dream_Nest",
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
   })
   .then(() => {
     app.listen(PORT, () => console.log(`Server start at Port: ${PORT}`));
