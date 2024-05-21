@@ -11,7 +11,10 @@ const userRoutes = require("./routes/user.js");
 
 
 const cors = require("cors");
-app.use(cors());
+app.use(cors({
+  origin: `https://dream-nest-tqet.onrender.com`,
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.static("public"));
 
@@ -21,12 +24,17 @@ app.use("/properties", listingRoutes)
 app.use("/bookings", BookingRoutes)
 app.use("/users",userRoutes);
 
+
+app.get("/", (req, res) => {
+  res.send("Welcome to Dream Nest!");
+});
+
 //mongoose setup
 app.get("/", (req,res)=>{
   res.send("Welcome to Dream Nest!")
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 mongoose
   .connect(process.env.MONGO_URL, {
     dbName: "Dream_Nest",
@@ -35,5 +43,7 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server start at Port: ${PORT}`));
   })
-  .catch((err) => console.log(`${err} Server did not connect`));
+  .catch((err) => console.log(`${err} Server did not connect`
+   
+  ));
 
