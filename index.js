@@ -22,6 +22,9 @@ app.use("/bookings", BookingRoutes)
 app.use("/users",userRoutes);
 
 //mongoose setup
+app.get("/", (req,res)=>{
+  res.send("Welcome to Dream Nest!")
+});
 
 const PORT = 3000;
 mongoose
