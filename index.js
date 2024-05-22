@@ -12,7 +12,7 @@ const userRoutes = require("./routes/user.js");
 
 const cors = require("cors");
 app.use(cors({
-  origin: `https://dream-nest-tqet.onrender.com`,
+  origin: 'https://dream-nest-tqet.onrender.com',
   credentials: true
 }));
 app.use(express.json());
